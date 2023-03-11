@@ -137,9 +137,10 @@ void Map_String::Find()
 //	m.merge(m_merge);
 //}
 //
+
 void Map_String::Run()
 {
 	int sum = 0;
 	for (auto i = m.begin(); i != m.end(); i++)
-		sum++;
+		sum=sum+1;
 }
