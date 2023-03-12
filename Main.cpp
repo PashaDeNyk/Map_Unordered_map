@@ -25,33 +25,33 @@ void CycleMap(Map map)
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Insert();
-		std::cout << "MAP Insert done ";
+		std::cout << "MAP Insert ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 10000000; i++)
 			map.Run();
-		std::cout << "MAP Run done ";
+		std::cout << "MAP Run ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 10000000; i++)
 			map.Find();
-		std::cout << "MAP Find done ";
+		std::cout << "MAP Find ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Extract();
-		std::cout << "MAP Extract done ";
+		std::cout << "MAP Extract ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Insert_or_Assign();
-		std::cout << "Map Insert_or_Assign done ";
+		std::cout << "Map Insert_or_Assign ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
@@ -59,37 +59,37 @@ void CycleMap(Map map)
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 100000000; i++)
 			map.Swap();
-		std::cout << "MAP Swaped ";
+		std::cout << "MAP Swap ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Clear();
-		std::cout << "MAP Clear done ";
+		std::cout << "MAP Clear ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Emplace();
-		std::cout << "MAP Emplace done ";
+		std::cout << "MAP Emplace ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Emplace_Hint();
-		std::cout << "MAP Emplace_Hint done ";
+		std::cout << "MAP Emplace_Hint ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Try_Emplace();
-		std::cout << "MAP Try_Emplace done ";
+		std::cout << "MAP Try_Emplace ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		map.Erase();
-		std::cout << "MAP Erase done ";
+		std::cout << "MAP Erase ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
@@ -97,7 +97,7 @@ void CycleMap(Map map)
 		map.Insert();
 		m_StartTime = std::chrono::system_clock::now();
 		map.Merge();
-		std::cout << "MAP Merge done ";
+		std::cout << "MAP Merge ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
@@ -120,63 +120,63 @@ void CycleUnorderedMap(Unordered_Map un_map)
 		std::cout << i + 1 << " cycle" << endl;
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Insert();
-		std::cout << "UN_MAP Insert done ";
+		std::cout << "UN_MAP Insert ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 10000000; i++)
 			un_map.Run();
-		std::cout << "UN_MAP Run done ";
+		std::cout << "UN_MAP Run ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 10000000; i++)
 			un_map.Find();
-		std::cout << "UN_MAP Find done ";
+		std::cout << "UN_MAP Find ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Extract();
-		std::cout << "UN_MAP Extract done ";
+		std::cout << "UN_MAP Extract ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Insert_or_Assign();
-		std::cout << "UN_MAP Insert or assign done ";
+		std::cout << "UN_MAP Insert or assign ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Clear();
-		std::cout << "UN_MAP Clear done ";
+		std::cout << "UN_MAP Clear ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Emplace();
-		std::cout << "UN_MAP Emplace done ";
+		std::cout << "UN_MAP Emplace ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Emplace_Hint();
-		std::cout << "UN_MAP Emplace hint done ";
+		std::cout << "UN_MAP Emplace hint ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Try_Emplace();
-		std::cout << "UN_MAP Try emplace done ";
+		std::cout << "UN_MAP Try emplace ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Erase();
-		std::cout << "UN_MAP Erase done ";
+		std::cout << "UN_MAP Erase ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
@@ -193,7 +193,7 @@ void CycleUnorderedMap(Unordered_Map un_map)
 		un_map.Insert();
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Merge();
-		std::cout << "UN_MAP Merge done ";
+		std::cout << "UN_MAP Merge ";
 		m_EndTime = std::chrono::system_clock::now();
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
