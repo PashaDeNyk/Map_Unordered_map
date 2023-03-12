@@ -21,6 +21,8 @@ void CycleMap(Map map)
 
 	for (int i = 0; i < 5; i++)
 	{
+		std::cout << i + 1 << " cycle" << endl;
+
 		m_StartTime = std::chrono::system_clock::now();
 		map.Insert();
 		std::cout << "MAP Insert done ";
@@ -101,8 +103,6 @@ void CycleMap(Map map)
 
 		map.Clear();
 		map.Erase();
-
-		std::cout << i + 1 << " cycle done" << endl;
 	}
 }
 
@@ -117,6 +117,7 @@ void CycleUnorderedMap(Unordered_Map un_map)
 
 	for (int i = 0; i < 5; i++)
 	{
+		std::cout << i + 1 << " cycle" << endl;
 		m_StartTime = std::chrono::system_clock::now();
 		un_map.Insert();
 		std::cout << "UN_MAP Insert done ";
@@ -180,6 +181,7 @@ void CycleUnorderedMap(Unordered_Map un_map)
 		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
 		un_map.CreateSwapMap();
+		un_map.Insert();
 		m_StartTime = std::chrono::system_clock::now();
 		for (int i = 0; i < 100000000; i++)
 			un_map.Swap();
@@ -199,7 +201,7 @@ void CycleUnorderedMap(Unordered_Map un_map)
 		un_map.Max_Load_Factor();
 		un_map.Clear();
 		un_map.Erase();
-		std::cout << i + 1 << " cycle done" << endl;
+
 	}
 }
 
@@ -210,6 +212,7 @@ void CycleStringMap(Map_String map_str)
 	do {
 		cin >> choose;
 	} while (choose < 0 or choose>3);
+
 
 	map_str.ChooseSize(choose);
 	std::cout << "String Map Insert: ";
@@ -248,13 +251,16 @@ void CycleStringUnorderedMap(Unordered_Map_String un_map_str)
 	m_EndTime = std::chrono::system_clock::now();
 	std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
 
-	std::cout << "String Unordered Map Find: ";
-	m_StartTime = std::chrono::system_clock::now();
-	for (int i = 0; i < 10000000; i++)
-		un_map_str.Find();
-	m_EndTime = std::chrono::system_clock::now();
-	std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
-
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << i + 1 << " cycle" << endl;
+		std::cout << "String Unordered Map Find: ";
+		m_StartTime = std::chrono::system_clock::now();
+		for (int i = 0; i < 10000000; i++)
+			un_map_str.Find();
+		m_EndTime = std::chrono::system_clock::now();
+		std::cout << "Milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(m_EndTime - m_StartTime).count() << endl;
+	}
 	std::cout << "Run Unordered Map: ";
 	m_StartTime = std::chrono::system_clock::now();
 	for (int i = 0; i < 10000000; i++)
@@ -271,7 +277,6 @@ int main()
 	Unordered_Map_String un_map_str;
 	srand(time(NULL));
 
-	
 	int choose_map = 0;
 	std::cout << "Choose: 1 - map 2 - unordered map 3 - map string 4 - unordered map string" << endl;
 	do {
